@@ -4,6 +4,7 @@ import { NavController, NavParams } from 'ionic-angular';
 
 import { ItemDetailsPage } from '../item-details/item-details';
 
+import { WeatherService } from '../../providers/weather-service';
 
 @Component({
   templateUrl: 'list.html'
@@ -13,7 +14,9 @@ export class ListPage {
   icons: string[];
   items: Array<{title: string, note: string, icon: string}>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+              public navParams: NavParams,
+              public weatherService: WeatherService) {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
@@ -28,6 +31,13 @@ export class ListPage {
         icon: this.icons[Math.floor(Math.random() * this.icons.length)]
       });
     }
+
+    this.weatherService.load('1').subscribe(data => {
+      console.log("Success:"+JSON.stringify(data));
+    },
+    error => {
+
+    });
   }
 
   itemTapped(event, item) {

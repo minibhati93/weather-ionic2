@@ -4,6 +4,7 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 import { ListPage } from '../pages/list/list';
+import { WeatherService } from '../providers/weather-service';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,6 @@ import { ListPage } from '../pages/list/list';
     ItemDetailsPage,
     ListPage
   ],
-  providers: []
+  providers: [ WeatherService ]
 })
 export class AppModule {}
