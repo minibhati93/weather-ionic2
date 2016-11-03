@@ -13,8 +13,9 @@ before_install:
 install:
   # install minimum set of dependencies to run tests and linters
   - npm install npm
-  - npm install gulp
-  - npm install bower
+  - npm install -g gulp
+  - npm install -g bower
+  - npm install -g ionic
 
 before_script:
   # update npm and bower dependencies
@@ -28,7 +29,6 @@ before_script:
 script:
   # install build dependecies
   - npm install cordova
-  - npm install ionic
 
   # - install plugins etc.
   - ionic state restore
