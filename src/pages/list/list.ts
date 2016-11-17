@@ -32,12 +32,12 @@ export class ListPage {
       });
     }
 
-    this.weatherService.load('1').subscribe(data => {
-      console.log("Success:"+JSON.stringify(data));
-    },
-    error => {
+    // this.weatherService.load('1').subscribe(data => {
+    //   console.log("Success:"+JSON.stringify(data));
+    // },
+    // error => {
 
-    });
+    // });
   }
 
   itemTapped(event, item) {
