@@ -18,7 +18,7 @@ export class HomePage {
 	let watch = Geolocation.watchPosition().subscribe(pos => {
 		// console.log('lat: ' + pos.coords.latitude + ', lon: ' + pos.coords.longitude);
 		this.weatherService.getCityByCoord(pos.coords.latitude, pos.coords.longitude).subscribe(data => {
-			// console.log(JSON.stringify(data));
+			console.log(JSON.stringify(data));
 			this.weatherData.country = data.sys.country;
 			// console.log(country);
 			this.weatherData.place = data.name;

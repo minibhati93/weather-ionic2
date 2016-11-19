@@ -14,7 +14,7 @@ export class WeatherService {
   }
 
   getCityByCoord(lat, lon){
-  	return this.http.get('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&APPID=3f510b12aa59b39aa37a1edbe57c8809')
+  	return this.http.get('http://api.openweathermap.org/data/2.5/weather?lat='+lat+'&lon='+lon+'&units=metric&APPID=3f510b12aa59b39aa37a1edbe57c8809')
         .map(res => res.json());
   }
 

@@ -14,8 +14,14 @@
 </ion-header>
 
 
-<ion-content padding>
-  <div *ngIf="weatherData">
+<ion-content padding class="home">
+  <ion-card>
+    <img src="img/smoky.png"/>
+    <div class="card-title">{{ weatherData.place}}, {{ weatherData.country}}</div>
+    <div class="card-subtitle">{{ weatherData.main}}, {{ weatherData.desc}}</div>
+  </ion-card>
+
+  <!-- <div *ngIf="weatherData">
     <span>Country: {{ weatherData.country}}</span><br>
     <span>Place: {{ weatherData.place}}</span><br>
     <span>Weather: {{ weatherData.main}}</span><br>
@@ -25,5 +31,5 @@
     <span>Temparature: {{ weatherData.temp}}</span><br>
     <span>Max Temparature: {{ weatherData.tempmin}}</span><br>
     <span>Min Temparature: {{ weatherData.tempmax}}</span><br>
-  </div>
+  </div> -->
 </ion-content>
