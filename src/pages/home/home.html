@@ -16,9 +16,10 @@
 
 <ion-content padding class="home">
   <ion-card>
-    <img src="img/smoky.png"/>
-    <div class="card-title">{{ weatherData.place}}, {{ weatherData.country}}</div>
-    <div class="card-subtitle">{{ weatherData.main}}, {{ weatherData.desc}}</div>
+    <img src="{{ weatherData.url }}"/>
+    <div class="card-temp">{{ weatherData.temp}}<sup>o</sup>C</div>
+    <div class="card-place">{{ weatherData.place}}, {{ weatherData.country}}</div>
+    <div class="card-weather">{{ weatherData.main}}, {{ weatherData.desc}}</div>
   </ion-card>
 
   <!-- <div *ngIf="weatherData">

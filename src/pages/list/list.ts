@@ -12,7 +12,8 @@ import { WeatherService } from '../../providers/weather-service';
 export class ListPage {
   selectedItem: any;
   icons: string[];
-  items: Array<{title: string, note: string, icon: string}>;
+  places: Array<{title: string, note: string, icon: string}>;
+  iconUrl: string = 'assets/img/countries/'
 
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
@@ -20,24 +21,14 @@ export class ListPage {
     // If we navigated to this page, we will have an item available as a nav param
     this.selectedItem = navParams.get('item');
 
-    this.icons = ['flask', 'wifi', 'beer', 'football', 'basketball', 'paper-plane',
-    'american-football', 'boat', 'bluetooth', 'build'];
-
-    this.items = [];
-    for(let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
-
-    // this.weatherService.load('1').subscribe(data => {
-    //   console.log("Success:"+JSON.stringify(data));
-    // },
-    // error => {
-
-    // });
+    this.places = [ {flag: this.iconUrl+'beijing.png',capital: 'Beijing' ,country: 'China'},
+                    {flag: this.iconUrl+'berlin.png',capital: 'Berlin' ,country: 'Germany'},
+                    {flag: this.iconUrl+'canberra.png',capital: 'Canberra' ,country: 'Austraila'},
+                    {flag: this.iconUrl+'london.png',capital: 'London' ,country: 'England'},
+                    {flag: this.iconUrl+'newyork.png',capital: 'New York' ,country: 'America'},
+                    {flag: this.iconUrl+'ottawa.png',capital: 'Ottawa' ,country: 'Canada'},
+                    {flag: this.iconUrl+'paris.png',capital: 'Paris' ,country: 'France'},
+    ];
   }
 
   itemTapped(event, item) {

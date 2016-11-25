@@ -11,7 +11,7 @@
 		text-align: center;
 	}
 
-	.card-title {
+	.card-place {
 		position: absolute;
 		top: 36%;
 		font-size: 2.0em;
@@ -20,10 +20,18 @@
 		color: #fff;
 	}
 
-	.card-subtitle {
+	.card-weather {
 		font-size: 1.0em;
 		position: absolute;
-		top: 52%;
+		top: 45%;
+		width: 100%;
+		color: #fff;
+	}
+
+	.card-temp {
+		font-size: 5.0em;
+		position: absolute;
+		top: 20%;
 		width: 100%;
 		color: #fff;
 	}

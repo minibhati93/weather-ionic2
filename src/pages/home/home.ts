@@ -27,7 +27,7 @@ export class HomePage {
 			this.weatherData.temp = data.main.temp;
 			this.weatherData.tempmin = data.main.temp_min;
 			this.weatherData.tempmax = data.main.temp_max;
-			this.weatherData.tempmax = data.main.temp_max;
+			this.weatherData.url = 'assets/img/weather/smoky.png';
 			this.weatherData.main = data.weather[0].main;
 			this.weatherData.desc = data.weather[0].description;
 		},
